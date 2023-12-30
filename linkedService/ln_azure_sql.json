@@ -1,0 +1,20 @@
+{
+	"name": "ln_azure_sql",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=devsqlserver202311.database.windows.net;Initial Catalog=dev-db",
+			"servicePrincipalId": "adab695c-f6af-4162-bb98-42b609de55a8",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ln_dev_akv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "dev-etl-sp-secret"
+			},
+			"tenant": "dd23da26-e569-4219-b881-62f207df0a84"
+		}
+	}
+}
